@@ -21,7 +21,7 @@ The architectural flow is very simple:
 
 - Get file contents of demo.html
 - Pass it to DeepSeek as a text (I know, token heavy)
-- And generate the out to analysis_output.md
+- And generate the output to analysis_output.md
 
 **Observations:**
 
