@@ -27,4 +27,4 @@ The architectural flow is very simple:
 
 - DeepSeek is really cheap. With 85k tokens already I've only used up 0.01$
 - Thinking set to 'disabled' does not work for some reason. 
-
+- Edit: Okay so I was able to make the Thinking option to work when disabled.
