@@ -1,0 +1,12 @@
+langchain
+anthropic
+langchain_deepseek
+langchain-chroma>=0.1.2
+langchain-docling
+pylance
+dotenv
+python-dotenv
+pydantic
+langchain-community
+langchain-text-splitters
+langchain-openai
