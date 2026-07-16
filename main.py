@@ -8,6 +8,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores.utils import filter_complex_metadata # TODO: Need to replace this package as it is deprecated
 
 
+# TODO: Move chunker and embedder to separate helper. Increase chunk size as it seems to not get the full recipe
 # FILE_PATH = "pinoy-recipes.pdf"
 #
 # pdfLoader = DoclingLoader(
