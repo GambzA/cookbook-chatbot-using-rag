@@ -18,4 +18,9 @@ Here I am creating an augmented cookbook that fetches data from several cookbook
 
 This is a build from my previous repo for prompting basics.
 
+**Architecutre**
+![Phase 2 RAG Architecture](phase2_rag_architecture.svg)
+
+
+
 Docs in Progress
