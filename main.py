@@ -5,7 +5,6 @@ api_key = os.getenv("DS_API_KEY")
 base_url = os.getenv("DS_BASE_URL")
 
 import anthropic
-import json
 
 client = anthropic.Anthropic(api_key=api_key, base_url=base_url)
 
