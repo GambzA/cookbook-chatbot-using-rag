@@ -1,30 +1,21 @@
-## AI Engineering Learning 1:
-### Understand how LLMs actually behave, and get comfortable calling them directly — no frameworks yet.
+## AI Engineering Learning 2:
+### Learn the most common real-world AI engineering pattern — grounding LLM answers in your own data.
 
- Understand transformers conceptually: tokens, context windows, embeddings, attention (why it matters practically, not the math derivation)
-- [x] Learn core prompting patterns: zero-shot, few-shot, chain-of-thought, system vs. user prompts, structured output (JSON mode / schemas)
-- [x] Make raw API calls (no LangChain, no SDK abstractions beyond the official client) — handle streaming responses, tool/function calling, multi-turn state yourself
-- [x] Understand token economics: cost per model, context limits, prompt caching
+- [ ] Embeddings and vector similarity (cosine similarity, why chunk size/overlap matters)
+- [ ] Pick and learn one vector DB: Chroma (easiest to start), pgvector (if you want to stay in Postgres), or Pinecone
+- [ ] Chunking strategies (fixed-size, semantic, recursive) and their tradeoffs
+- [ ] Hybrid search (keyword + semantic) and reranking
+- [ ] Citation/grounding — tracing an answer back to its source chunk
 
 **Resources:**
-- [Anthropic Prompt Engineering Overview](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
-- [Anthropic Interactive Prompt Engineering Tutorial (GitHub)](https://github.com/anthropics/prompt-eng-interactive-tutorial)
-- [Anthropic Cookbook (working code examples)](https://github.com/anthropics/anthropic-cookbook)
-- [OpenAI Cookbook](https://cookbook.openai.com/)
-- [Anthropic: Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
+- [Anthropic: Contextual Retrieval](https://www.anthropic.com/news/contextual-retrieval)
+- [Anthropic Embeddings docs](https://docs.anthropic.com/en/docs/build-with-claude/embeddings)
+- [Anthropic Academy — Build a RAG system with MongoDB / LlamaIndex](https://www.anthropic.com/learn/build-with-claude)
+- [Chroma docs](https://docs.trychroma.com/)
 
 **About:**
-Here I have create a simple code analyzer with Python and DeepSeek V4 Flash. 
-The goal of this is to understand how tokens, context windows, and calling the API works.
+Here I am creating an augmented cookbook that fetches data from several cookbook PDFs, get embeddings from OpenAI *text-embedding-3-small* model and store them to a vector DB (TBA). 
 
-The architectural flow is very simple:
+This is a build from my previous repo for prompting basics.
 
-- Get file contents of demo.html
-- Pass it to DeepSeek as a text (I know, token heavy)
-- And generate the output to analysis_output.md
-
-**Observations:**
-
-- DeepSeek is really cheap. With 85k tokens already I've only used up 0.01$
-- Thinking set to 'disabled' does not work for some reason. 
-- Edit: Okay so I was able to make the Thinking option to work when disabled.
+Docs in Progress
