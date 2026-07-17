@@ -12,14 +12,13 @@ class ChromaHelper:
     @staticmethod
     def check_if_db_exists():
         if not os.path.exists("chroma_db"):
-            os.makedirs("chroma_db")
             return False
         return True
 
-    def create_chroma_db(self, documents):
+    def create_chroma_db(self, embeddings):
         if not self.check_if_db_exists():
             Chroma.from_documents(
-                documents=documents,
+                documents=embeddings,
                 collection_name="cooking_recipes",
                 embedding=self.embedding_llm,
                 persist_directory="./chroma_db"
@@ -37,6 +36,6 @@ class ChromaHelper:
     def get_results(self, query):
         if self.check_if_db_exists():
             self.call_chroma_db()
-            results = self.vectorStore.similarity_search_with_relevance_scores(query, k=3)
+            results = self.vectorStore.similarity_search_with_relevance_scores(query, k=1)
             return results
         return None
