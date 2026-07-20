@@ -8,19 +8,21 @@ class MetaDataProcessor:
 
     @staticmethod
     def pdf_chunker():
-        # TODO: need to change chunking strategy, will try parent-child retrieval
-        file_path = "recipes/pinoy-recipes.pdf"
+        file_path = "recipes/The-Philippine-Cookbook.pdf"
 
         pdf_loader = DoclingLoader(
             file_path=file_path
         )
+
+        docs = pdf_loader.load()
+
         text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=500,
-            chunk_overlap=50,
+            chunk_size=2000,
+            chunk_overlap=1000,
             length_function=lambda x: len(x),
             is_separator_regex=True
         )
 
-        chunks = text_splitter.split_documents(pdf_loader.load())
+        chunks = text_splitter.split_documents(docs)
         chunks_clean = filter_complex_metadata(chunks)
         return chunks_clean

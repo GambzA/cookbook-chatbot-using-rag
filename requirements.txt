@@ -10,3 +10,5 @@ pydantic
 langchain-community
 langchain-text-splitters
 langchain-openai
+langchain-core
+langchain_classic

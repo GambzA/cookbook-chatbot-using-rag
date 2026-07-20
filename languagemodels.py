@@ -33,17 +33,10 @@ class ModelHelper():
 
         messages = [
             (
-                "system",
-                "You are a code analyst responsible for analyzing code and providing insights. " \
-                "You will receive code snippets and your task is to analyze them and provide a detailed report on their functionality, potential issues, and suggestions for improvement. " \
-                "Your analysis should be thorough and cover all aspects of the code, including logic, structure, readability, and performance." \
-                "Do not provide thinking steps or reasoning, only provide the final analysis report.",
-            ),
-            (
                 "user",
                 messages
             ),
         ]
         message = deepseek_llm.invoke(messages)
 
-        return deepseek_llm
+        return message

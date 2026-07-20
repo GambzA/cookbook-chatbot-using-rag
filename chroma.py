@@ -36,6 +36,6 @@ class ChromaHelper:
     def get_results(self, query):
         if self.check_if_db_exists():
             self.call_chroma_db()
-            results = self.vectorStore.similarity_search_with_relevance_scores(query, k=1)
+            results = self.vectorStore.similarity_search_with_relevance_scores(query, k=5)
             return results
         return None
