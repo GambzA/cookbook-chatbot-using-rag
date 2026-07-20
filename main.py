@@ -1,9 +1,14 @@
 import metadataprocessor
+import argparse
 from chroma import ChromaHelper
 from metadataprocessor import MetaDataProcessor
 from languagemodels import ModelHelper
 from langchain_core.prompts import ChatPromptTemplate
 
+parser = argparse.ArgumentParser()
+parser.add_argument("query_text")
+args = parser.parse_args()
+print(args.query_text)
 
 processor = MetaDataProcessor()
 chroma_helper = ChromaHelper()
@@ -26,7 +31,7 @@ prompt_template = """
     5. Provide other recipes with relevant main ingredients
 """
 
-query = "What is the recipe for Steamed White Chicken?"
+query = args.query_text
 
 results = chroma_helper.get_results(query)
 
