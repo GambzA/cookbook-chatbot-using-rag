@@ -14,13 +14,14 @@
 - [Chroma docs](https://docs.trychroma.com/)
 
 **About:**
-Here I am creating an augmented cookbook that fetches data from several cookbook PDFs, get embeddings from OpenAI *text-embedding-3-small* model and store them to a vector DB (TBA). 
+Finished creating my first RAG application that uses Python, ChromaDB for storing and "embedding" PDF data with OpenAI embeddings, and LangChain for the RAG pipeline. 
+The application allows users to ask questions about Filipino dishes. 
+and it retrieves relevant information from the document to provide exclusive answers based on the Recipes in the PDF, provide ingredients, and cooking instructions.
+And added a simple other similar dishes recommendation feature based on the user's query.
 
-This is a build from my previous repo for prompting basics.
+TODO: Need to refactor the code to make it user-friendly and add more features like a web interface, and more.
 
 **Architecutre**
 ![Phase 2 RAG Architecture](docs/phase2_rag_architecture.svg)
 
 
-
-Docs in Progress
